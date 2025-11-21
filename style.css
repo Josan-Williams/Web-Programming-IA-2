@@ -1,0 +1,223 @@
+/* CSS Variables for consistency and theme - IA#2 1c */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #FFC107;
+    --light-green: #81C784;
+    --dark-green: #388E3C;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --font-family: Arial, sans-serif;
+    --spacing: 1rem;
+}
+
+/* Element selector for body - IA#2 1a */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Class selector for nav-container - IA#2 1a */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Descendant selector for nav ul li - IA#2 1a */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ID selector for welcome section - IA#2 1a */
+#welcome {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Welcome section styling */
+.welcome {
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+/* Features section styling */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.feature {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Pseudo-class selector for links on hover - IA#2 1a */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox for layout - IA#2 1b */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
+
+/* Background logo with low opacity */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Assets/logo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.8;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Grid for product grid - IA#2 1b */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing);
+    padding: var(--spacing);
+}
+
+/* Product hover animation */
+.product {
+    border: 1px solid var(--light-green);
+    padding: var(--spacing);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart styling */
+.cart-items {
+    margin-bottom: var(--spacing);
+}
+
+.cart-items div {
+    padding: var(--spacing);
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border: 1px solid var(--light-green);
+    border-radius: 4px;
+}
+
+.cart-total {
+    background-color: var(--light-green);
+    padding: var(--spacing);
+    border-radius: 4px;
+    margin-bottom: var(--spacing);
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive design - IA#2 1b */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: var(--spacing);
+    border: 1px solid var(--light-green);
+}
+
+label {
+    margin-top: var(--spacing);
+}
+
+input, textarea, button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Button class - IA#2 1a */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--spacing);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--dark-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--spacing);
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
