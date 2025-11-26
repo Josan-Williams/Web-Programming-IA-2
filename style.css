@@ -1,4 +1,6 @@
 /* CSS Variables for consistency and theme - IA#2 1c */
+/* Defines colors, fonts, and spacing used throughout the stylesheet */
+/* These variables help maintain a consistent design and make future updates easier */
 :root {
     --primary-color: #4CAF50;
     --secondary-color: #FFC107;
@@ -11,6 +13,7 @@
 }
 
 /* Element selector for body - IA#2 1a */
+/* Sets global styles for the body element, including font, text color, and background color */
 body {
     font-family: var(--font-family);
     color: var(--text-color);
@@ -20,6 +23,7 @@ body {
 }
 
 /* Class selector for nav-container - IA#2 1a */
+/* Styles the navigation container with flexbox for layout */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -30,6 +34,7 @@ body {
 }
 
 /* Descendant selector for nav ul li - IA#2 1a */
+/* Styles the navigation list items */
 nav ul {
     list-style: none;
     display: flex;
@@ -42,12 +47,14 @@ nav ul li a {
 }
 
 /* ID selector for welcome section - IA#2 1a */
+/* Styles the welcome section with centered text and padding */
 #welcome {
     text-align: center;
     padding: 2rem;
 }
 
 /* Welcome section styling */
+/* Adds additional styles to the welcome section cause mi hype and nuff*/
 .welcome {
     text-align: center;
     padding: 3rem 2rem;
@@ -55,6 +62,7 @@ nav ul li a {
 }
 
 /* Features section styling */
+/* Uses flexbox to layout feature boxes evenly */
 .features {
     display: flex;
     justify-content: space-around;
@@ -79,11 +87,13 @@ nav ul li a {
 }
 
 /* Pseudo-class selector for links on hover - IA#2 1a */
+/* Adds an underline effect when hovering over links */
 a:hover {
     text-decoration: underline;
 }
 
 /* Flexbox for layout - IA#2 1b */
+/* Styles the main content area with flexbox for vertical layout */
 main {
     display: flex;
     flex-direction: column;
@@ -92,6 +102,7 @@ main {
 }
 
 /* Background logo with low opacity */
+/* Adds a background logo to the main section with reduced opacity */
 main::before {
     content: '';
     position: absolute;
@@ -109,6 +120,7 @@ main::before {
 }
 
 /* Grid for product grid - IA#2 1b */
+/* Uses CSS Grid to layout products in a responsive grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -117,6 +129,7 @@ main::before {
 }
 
 /* Product hover animation */
+/* Adds a hover effect to product cards for interactivity */
 .product {
     border: 1px solid var(--light-green);
     padding: var(--spacing);
@@ -130,6 +143,7 @@ main::before {
 }
 
 /* Cart styling */
+/* Styles the shopping cart section */
 .cart-items {
     margin-bottom: var(--spacing);
 }
@@ -164,6 +178,7 @@ main::before {
 }
 
 /* Responsive design - IA#2 1b */
+/* Adjusts layout for smaller screens */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -178,6 +193,7 @@ main::before {
 }
 
 /* Form styling */
+/* Styles the form for better usability */
 form {
     display: flex;
     flex-direction: column;
@@ -198,6 +214,7 @@ input, textarea, button {
 }
 
 /* Button class - IA#2 1a */
+/* Styles buttons with primary color and hover effect */
 .btn {
     background-color: var(--primary-color);
     color: white;
@@ -215,6 +232,8 @@ input, textarea, button {
 }
 
 /* Footer */
+/* Styles the footer with centered text and primary color background */
+/* Footer is kept simple and clean for better readability */
 footer {
     text-align: center;
     padding: var(--spacing);
